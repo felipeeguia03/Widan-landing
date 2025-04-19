@@ -301,7 +301,7 @@ section {
 }
 
 .carrousel-img {
-  background-color: yellow;
+  background-color: black;
   height: 194px;
   width: 100%;
   border-radius: 16px;
@@ -334,11 +334,7 @@ section {
 
 .footer {
   margin-top: 40px;
-}
-.footer-container {
-  background-color: bisque;
-  padding: 48px 24px;
-  width: 100%;
+  margin-bottom: 0px;
 }
 
 .footer-img-wrapper {
@@ -349,7 +345,7 @@ section {
 }
 
 .footer-img-content {
-  background-color: blue;
+  background-color: black;
   height: 360px;
   padding: 80px;
   width: 100%;
@@ -388,13 +384,21 @@ section {
   -webkit-font-smoothing: antialiased;
 }
 
+
+.footer-container {
+  padding: 64px 104px;
+  width: 100%;
+}
+
 .footer-bottom-wrapper {
   width: 100%;
   height: auto;
-  background-color: aqua;
-  padding: 48px 80px;
+  padding: 48px 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: start;
+  align-content: start;
+  gap: 80px;
 }
 
 .footer-references {
