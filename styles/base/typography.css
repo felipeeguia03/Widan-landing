@@ -105,6 +105,9 @@ h6{
 
 .alternate{
     color: white;
-    text-shadow: 1px 0;
-    
+    font-family: var(--font-chakra);
+}
+
+.alt-weight{
+    font-weight: 400;
 }
