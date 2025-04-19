@@ -10,12 +10,12 @@ button{
 .secondary-btn-1{
     background-color: var(--color-700);
     color: white;
-    padding: 10px 20px;
-    size: var(--button-large-size);
-    line-height: var(--button-medium-line-height);/* 26px */
+    padding: 8px 22px;
+    size: var(--button-large-size); /* 20px*/
+    line-height: var(--button-large-line-height);/* 32px */
     border-radius: 30px;
     border: none;
-    font-size: 16x;
+    font-size: 18px;
 
 
 }
