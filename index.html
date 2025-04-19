@@ -11,6 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
+
+    <link rel="stylesheet" href="index.js">
   
 
   <title>Widan brodii</title>
@@ -84,7 +86,7 @@
             <h3>ACCESO GLOBAL</h3>
             <img class="reason-logo" src="" alt="logito" />
           </div>
-          <p class="p-opportunity">Invertí en activos reales de alta rentabilidad y liquidez sin barreras geográficas ni
+          <p class="p-reason">Invertí en activos reales de alta rentabilidad y liquidez sin barreras geográficas ni
             burocráticas. Desde cualquier parte del mundo, con solo unos clics.</p>
         </div>
       </div>
@@ -95,7 +97,7 @@
             <h3>MAYOR LIQUIDEZ</h3>
             <img class="reason-logo" src="" alt="logito" />
           </div>
-          <p class="p-opportunity">Digitalizamos y fraccionamos activos tradicionales para que puedas comprarlos y venderlos de
+          <p class="p-reason">Digitalizamos y fraccionamos activos tradicionales para que puedas comprarlos y venderlos de
             forma rápida, flexible y eficiente.</p>
         </div>
       </div>
@@ -108,7 +110,7 @@
             <h3>DIVERSIFICACIÓN INTELIGENTE</h3>
             <img class="reason-logo" src="" alt="logito" />
           </div>
-          <p class="p-opportunity">Accedé a la estrategia de los grandes inversores mundiales. Diversificá en múltiples
+          <p class="p-reason">Accedé a la estrategia de los grandes inversores mundiales. Diversificá en múltiples
             sectores, desde bienes raíces hasta el desarrollo de talentos deportivos, maximizando rentabilidad y
             minimizando riesgos.</p>
         </div>
@@ -120,7 +122,7 @@
             <h3>TRANSPARENCIA Y SEGURIDAD</h3>
             <img class="reason-logo" src="" alt="logito" />
           </div>
-          <p class="p-opportunity">Cada transacción es registrada en la blockchain, garantizando trazabilidad, inmutabilidad y
+          <p class="p-reason">Cada transacción es registrada en la blockchain, garantizando trazabilidad, inmutabilidad y
             confianza en cada inversión.</p>
         </div>
         
@@ -228,7 +230,7 @@
           <img class="carrousel-img" src="" alt="foto de activo">
           <div class="carrousel-text">
             <div class="carrousel-top">
-              <p class="title-opportunity">Tomás Etcheverry</p>
+              <p class="title-opportunity">Tomás Martín Etcheverry</p>
               <button class="fourth-btn">USD 400</button>
             </div>
             <div class="carrousel-bottom">
@@ -307,7 +309,7 @@
           <img class="carrousel-img" src="" alt="foto de activo">
           <div class="carrousel-text">
             <div class="carrousel-top">
-              <p class="title-opportunity">Tomás Etcheverry</p>
+              <p class="title-opportunity">Tomás Martín Etcheverry</p>
               <button class="fourth-btn">USD 400</button>
             </div>
             <div class="carrousel-bottom">
@@ -339,7 +341,7 @@
 
     </div>
 
-    <script src="index.js"></script>
+  
 
     <button class="secondary-btn-2">Explorar oportunidades</button>
 
@@ -421,6 +423,41 @@
 
 
   </section>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const track = document.getElementById('carrouselTrack');
+      const cards = track.children;
+  
+      // Función para clonar y añadir las cards al final
+      function regenerateCards() {
+        const totalWidth = track.scrollWidth; // Ancho total del track
+        const currentOffset = track.scrollLeft; // Desplazamiento actual
+        const visibleWidth = track.clientWidth; // Ancho visible del track
+  
+        // Si se ha desplazado hasta el final
+        if (currentOffset >= totalWidth - visibleWidth) {
+          // Clonamos las primeras cards y las añadimos al final
+          Array.from(cards).forEach(card => {
+            const clone = card.cloneNode(true);
+            track.appendChild(clone);
+          });
+  
+          // Reiniciamos el desplazamiento para que parezca un bucle infinito
+          track.scrollLeft = 0;
+        }
+      }
+  
+      // Se activa cuando el track se desplaza
+      track.addEventListener('scroll', regenerateCards);
+  
+      // Inicia el desplazamiento continuo del contenido
+      setInterval(() => {
+        track.scrollLeft += 1; // Ajusta la velocidad del movimiento
+      }, 20); // Velocidad del movimiento (menor es más rápido)
+    });
+  </script>
+  
 </body>
 
 

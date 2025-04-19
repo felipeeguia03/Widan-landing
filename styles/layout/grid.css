@@ -273,32 +273,41 @@ section {
   margin-top: 60px;
 }
 
-@keyframes scrollLoopRight {
+@keyframes moveCard {
   0% {
-    transform: translateX(-50%);
+    transform: translateX(0); /* inicia fuera de pantalla derecha */
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(100%); /* sale por la izquierda */
   }
 }
+
+
+
 
 /* Duplicar las tarjetas */
 .carrousel-track {
   width: 100%;
   display: flex;
   gap: 16px;
-  animation: scrollLoop 10s linear infinite;
+  mask-image: linear-gradient(to right, 
+  rgba(0, 0, 0, 0) 0%, 
+  rgb(0, 0, 0) 12.5%, 
+  rgb(0, 0, 0) 87.5%, 
+  rgba(0, 0, 0, 0) 100%);
+
 }
 .carrousel-card {
   width: 290px;
   height: 288px;
-  background-color: #eef4f5;
+  background-color: rgb(238, 244, 245);
   padding: 16px;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
   border-radius: 20px;
   margin-bottom: 70px;
+  animation: moveCard 3s linear infinite;
 }
 
 .carrousel-img {

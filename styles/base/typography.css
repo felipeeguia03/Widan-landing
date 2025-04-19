@@ -54,6 +54,20 @@ h6{
 
 
 .p-opportunity{
+    color: rgb(83, 122, 135);
+    display: block;
+    font-family: "Chakra Petch", "Chakra Petch Placeholder", sans-serif;
+    font-feature-settings: normal;
+    font-size: 12px;
+    font-style: normal;
+    font-variation-settings: normal;
+    font-weight: 300;
+    height: 23px;
+    letter-spacing: normal;
+    line-height: 23.99px;
+}
+
+.p-reason{
     color: var(--color-description);
     text-align: left;
     line-height: 24px;
@@ -68,8 +82,18 @@ h6{
 }
 
 .title-opportunity{
-    line-height: 24px;
-    font-size: 14px;
+    color: rgb(63, 85, 95);
+display: block;
+font-family: "Chakra Petch", "Chakra Petch Placeholder", sans-serif;
+font-feature-settings: normal;
+font-size: 14px;
+font-style: normal;
+font-variation-settings: normal;
+font-weight: 400;
+height: 23px;
+letter-spacing: normal;
+line-height: 23.99px;
+-webkit-text-stroke-color: rgb(63, 85, 95);
 }
   
 .p-call{
