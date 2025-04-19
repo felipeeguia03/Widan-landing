@@ -40,7 +40,6 @@ section {
   padding: 0 140px;
   justify-content: center;
   display: flex;
-
 }
 
 .navbar {
@@ -49,7 +48,6 @@ section {
   width: 100%;
   display: flex;
   align-items: center;
-  align-content: center;
   justify-content: start;
   padding: 16px;
   gap: 60px;
@@ -69,8 +67,72 @@ section {
   justify-content: flex-start;
 }
 
-/*  HERO    */
+.hamburger-btn{
+  display: none;
+}
 
+/* Responsive: iPad y celulares (≤ 1024px) */
+@media (max-width: 1024px) {
+  .navbar-wrapper {
+    padding: 0 48px;
+  }
+
+  .navbar {
+    gap: 24px;
+    padding: 12px;
+    border-radius: 60px;
+  }
+
+  .btn-wrapper {
+    display: none; /* Oculta los botones normales */
+  }
+
+  .hamburger-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(23, 114, 135);
+    font-size: 32px; /* Más grande el icono */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: none;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .hamburger-btn:hover {
+    background-color: #e1eaec; /* O lo que uses como hover */
+    transform: scale(1.05);
+  }
+
+  .navbar {
+    justify-content: space-between; /* Espacia logo, login y hamburguesa */
+    gap: 16px;
+  }
+
+  .inicio{
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-wrapper {
+    padding: 0 24px;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 10px;
+    border-radius: 40px;
+  }
+}
+
+
+/* HERO */
 .hero {
   display: flex;
   flex-direction: column;
@@ -87,10 +149,21 @@ section {
   flex-shrink: 0;
 }
 
+
+
 .hero-container {
   display: flex;
   gap: 40px;
-  flex-wrap: wrap;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    
+  }
 }
 
 .hero-wrapper {
@@ -108,7 +181,6 @@ section {
 }
 
 /* VIDEO */
-
 .video-grapper {
   display: flex;
   flex-direction: column;
@@ -128,7 +200,6 @@ section {
 }
 
 /* OPPORTUNITY */
-
 .card {
   background-color: #d0e7ef;
   border-radius: 12px;
@@ -136,7 +207,7 @@ section {
   height: 255px;
 }
 
-.reason-logo{
+.reason-logo {
   flex-grow: 0;
   margin-bottom: 50px;
 }
@@ -148,6 +219,7 @@ section {
   max-width: 100%;
   overflow: hidden;
 }
+
 .reason-card-wrapper-2 {
   display: flex;
   overflow: hidden;
@@ -156,6 +228,7 @@ section {
   width: auto;
   max-width: 100%;
 }
+
 .card-layout {
   display: flex;
   flex-direction: column;
@@ -172,7 +245,6 @@ section {
 
 .c1 {
   width: 60%;
-
   background-color: #edfdfe;
 }
 
@@ -191,6 +263,170 @@ section {
   background-color: #effaf4;
   margin-bottom: 25px;
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1200px) {
+  .navbar-wrapper {
+    padding: 0 40px;
+  }
+
+  .navbar {
+    gap: 30px;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-top: 40px;
+  }
+
+  .video-img {
+    width: 90%;
+    max-width: 800px;
+  }
+
+  .reason-card-wrapper-1,
+  .reason-card-wrapper-2 {
+    margin: 20px;
+    gap: 20px;
+  }
+
+  .steps-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .step {
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-wrapper {
+    padding: 0 20px;
+  }
+
+  .navbar {
+    padding: 12px;
+    gap: 15px;
+  }
+
+  .btn-wrapper {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: block;
+  }
+
+  .hero-wrapper {
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .primary-btn-1,
+  .primary-btn-2 {
+    width: 100%;
+  }
+
+  .reason-card-wrapper-1,
+  .reason-card-wrapper-2 {
+    flex-direction: column;
+  }
+
+  .c1, .c2, .c3, .c4 {
+    width: 100%;
+  }
+
+  .footer-bottom-wrapper {
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+  }
+
+  .footer-img-wrapper {
+    padding: 40px 20px;
+  }
+
+  .footer-img-content {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .footer-rights {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-rights-wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .p-info, .p-call {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .carrousel-card {
+    width: 250px;
+    height: 260px;
+  }
+
+  .carrousel-img {
+    height: 160px;
+  }
+
+  .secondary-btn-2 {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .footer-img-content h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
 
 /* STEPS */
 
@@ -462,4 +698,59 @@ section {
   flex-direction: row;
   gap: 20px;
   justify-content: space-around;
+}
+
+/* Ajustes para el modal en móvil */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+.modal-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-content ul li {
+  padding: 15px 0;
+  border-bottom: 1px solid #e1eaec;
+}
+
+.modal-content ul li:last-child {
+  border-bottom: none;
+}
+
+.modal-content ul li a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-family: var(--font-chakra);
+  font-size: 18px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--color-text);
 }

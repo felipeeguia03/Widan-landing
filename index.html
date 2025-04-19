@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="/Widan-landing/styles/base/base.css" />
   <link
     href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
@@ -11,8 +12,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
-
-    <link rel="stylesheet" href="index.js">
   
 
   <title>Widan brodii</title>
@@ -31,7 +30,8 @@
           <button class="third-btn">Sobre nosotros</button>
           <button class="third-btn">Contacto</button>
         </div>
-        <button class="secondary-btn-1">Iniciar sesión</button>
+        <button class="secondary-btn-1 inicio">Iniciar sesión</button>
+        <button class="hamburger-btn" onclick="toggleModal()">☰</button>
       </div>
     </div>
 
@@ -56,6 +56,19 @@
     <div class="hero-image"></div>
 
   </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="toggleModal()">×</button>
+      <ul>
+        <li><a href="#">¿Como funciona?</a></li>
+        <li><a href="#">Preguntas frecuentes</a></li>
+        <li><a href="#">Sobre nosotros</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+
   </section>
 
 
@@ -424,40 +437,8 @@
 
   </section>
 
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      const track = document.getElementById('carrouselTrack');
-      const cards = track.children;
-  
-      // Función para clonar y añadir las cards al final
-      function regenerateCards() {
-        const totalWidth = track.scrollWidth; // Ancho total del track
-        const currentOffset = track.scrollLeft; // Desplazamiento actual
-        const visibleWidth = track.clientWidth; // Ancho visible del track
-  
-        // Si se ha desplazado hasta el final
-        if (currentOffset >= totalWidth - visibleWidth) {
-          // Clonamos las primeras cards y las añadimos al final
-          Array.from(cards).forEach(card => {
-            const clone = card.cloneNode(true);
-            track.appendChild(clone);
-          });
-  
-          // Reiniciamos el desplazamiento para que parezca un bucle infinito
-          track.scrollLeft = 0;
-        }
-      }
-  
-      // Se activa cuando el track se desplaza
-      track.addEventListener('scroll', regenerateCards);
-  
-      // Inicia el desplazamiento continuo del contenido
-      setInterval(() => {
-        track.scrollLeft += 1; // Ajusta la velocidad del movimiento
-      }, 20); // Velocidad del movimiento (menor es más rápido)
-    });
-  </script>
-  
+  <script src="/Widan-landing/index.js"></script>
+
 </body>
 
 
