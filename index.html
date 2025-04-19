@@ -77,38 +77,35 @@
       <p class="form-description">Dejanos tus datos para que podamos ayudarte en lo que necesites, o contarte más sobre la nueva forma de invertir que tenemos para ofrecerte.</p>
       
       <form id="contactForm" onsubmit="handleSubmit(event)">
-        <div class="form-group">
-          <label class="form-label" for="nombre">Nombre</label>
-          <input type="text" id="nombre" class="form-input" required>
-          <span class="error-message">Este campo es obligatorio</span>
-        </div>
+        <div class="form-fields-container">
+          <div class="form-group">
+            <label class="form-label" for="nombre">Nombre</label>
+            <input type="text" id="nombre" class="form-input" required>
+          </div>
 
-        <div class="form-group">
-          <label class="form-label" for="apellido">Apellido</label>
-          <input type="text" id="apellido" class="form-input" required>
-          <span class="error-message">Este campo es obligatorio</span>
-        </div>
+          <div class="form-group">
+            <label class="form-label" for="apellido">Apellido</label>
+            <input type="text" id="apellido" class="form-input" required>
+          </div>
 
-        <div class="form-group">
-          <label class="form-label" for="celular">Celular</label>
-          <input type="tel" id="celular" class="form-input" required>
-          <span class="error-message">Este campo es obligatorio</span>
-        </div>
+          <div class="form-group">
+            <label class="form-label" for="celular">Celular</label>
+            <input type="tel" id="celular" class="form-input" required>
+          </div>
 
-        <div class="form-group">
-          <label class="form-label" for="email">Correo electrónico</label>
-          <input type="email" id="email" class="form-input" required>
-          <span class="error-message">Este campo es obligatorio</span>
-        </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Correo electrónico</label>
+            <input type="email" id="email" class="form-input" required>
+          </div>
 
-        <div class="form-group">
-          <label class="form-label" for="mensaje">Mensaje</label>
-          <textarea id="mensaje" class="form-textarea" required></textarea>
-          <span class="error-message">Este campo es obligatorio</span>
+          <div class="form-group full-width">
+            <label class="form-label" for="mensaje">Mensaje</label>
+            <textarea id="mensaje" class="form-textarea" required></textarea>
+          </div>
         </div>
 
         <div class="form-buttons">
-          <button type="submit" class="form-submit primary" id="submitButton">Enviar</button>
+          <button type="submit" class="form-submit primary">Enviar</button>
           <button type="button" class="form-submit secondary" onclick="toggleFormModal()">Tal vez luego</button>
         </div>
       </form>
