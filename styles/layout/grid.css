@@ -264,8 +264,7 @@ section {
   margin-bottom: 25px;
 }
 
-/* MEDIA QUERIES */
-
+/* MEDIA QUERIES GENERALES */
 @media (max-width: 1200px) {
   .navbar-wrapper {
     padding: 0 40px;
