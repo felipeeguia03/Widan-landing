@@ -1,0 +1,118 @@
+
+/* === Font imports === */
+@font-face {
+    font-family: 'TT Firs Neue Trl';
+    src: url('./fonts/tt-firs-neue/TTFirsNeueTrl-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'TT Firs Neue Trl';
+    src: url('./fonts/tt-firs-neue/TTFirsNeueTrl-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+
+
+
+
+
+:root {
+  /* Colores primarios */
+  --color-neutral-black: rgb(29, 29, 27); /* Pantone Neutral Black C */
+  --color-green-346: rgb(173, 221, 199); /* Pantone 346 C */
+
+  /* Color secundario */
+  --color-medium-sky-blue: rgb(114, 185, 213); /* Pantone Medium Sky Blue */
+
+  /* Degradado o color adicional */
+  --color-cool-gray-10: rgb(99, 102, 106); /* Pantone Cool Gray 10 C */
+
+  --color-text: rgb(63, 85, 95);
+  --color-description: rgb(71, 102, 115);
+
+
+
+  --color-800: rgb(28, 93, 110);   /*El clasico de iniciar sesion*/
+--color-900: rgb(27, 78, 94);    /* el mismo pero mas negrito*/
+--color-700: #177287;
+--color-600: #148ea6;
+
+
+
+  --font-chakra: 'Chakra Petch', sans-serif;
+  --font-space: 'Space Grotesk', sans-serif;
+
+
+   /* === Font families === */
+   --font-tt-firs: 'TT Firs Neue Trl', sans-serif;
+   --font-inter: 'Inter', sans-serif;
+ 
+   /* === Font weights === */
+   --font-weight-regular: 400;
+   --font-weight-medium: 500;
+   --font-weight-large: 600;
+ 
+   /* === Headings === */
+   --h1-size: 56px;
+   --h1-line-height: 64px;
+ 
+   --h2-size: 40px;
+   --h2-line-height: 48px;
+ 
+   --h3-size: 32px;
+   --h3-line-height: 40px;
+ 
+   --h4-size: 30px;
+   --h4-line-height: 38px;
+ 
+   --h5-size: 28px;
+   --h5-line-height: 36px;
+ 
+   --h6-size: 24px;
+   --h6-line-height: 32px;
+ 
+   /* === Buttons === */
+   --btn-large-size: 20px;
+   --btn-large-line-height: 32px;
+ 
+   --btn-medium-size: 18px;
+   --btn-medium-line-height: 26px;
+ 
+   --btn-small-size: 16px;
+   --btn-small-line-height: 24px;
+ 
+   /* === Titles === */
+   --title-1-size: 20px;
+   --title-1-line-height: 28px;
+ 
+   --title-2-size: 18px;
+   --title-2-line-height: 26px;
+ 
+   /* === Subtitles === */
+   --subtitle-1-size: 20px;
+   --subtitle-1-line-height: 28px;
+ 
+   --subtitle-2-size: 16px;
+   --subtitle-2-line-height: 24px;
+ 
+   /* === Paragraphs === */
+   --paragraph-1-size: 22px;
+   --paragraph-1-line-height: 30px;
+ 
+   --paragraph-2-size: 18px;
+   --paragraph-2-line-height: 26px;
+ 
+   /* === Inputs === */
+   --input-size: 16px;
+   --input-line-height: 24px;
+ 
+   --helper-size: 14px;
+   --helper-line-height: 20px;
+ 
+   --label-size: 16px;
+   --label-line-height: 20px;
+}
+

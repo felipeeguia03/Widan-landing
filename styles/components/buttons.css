@@ -1,0 +1,87 @@
+button{
+    font-family: var(--font-chakra);
+    font-weight: var(--font-weight-regular);
+}
+
+
+
+
+
+.secondary-btn-1{
+    background-color: var(--color-700);
+    color: white;
+    padding: 10px 20px;
+    size: var(--button-large-size);
+    line-height: var(--button-medium-line-height);/* 26px */
+    border-radius: 30px;
+    border: none;
+    font-size: 16x;
+
+
+}
+
+.secondary-btn-2{
+    background-color: var(--color-700);
+    color: white;
+    padding: 10px 20px;
+    size: var(--button-large-size);
+    line-height: var(--button-medium-line-height);/* 26px */
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    width: 290px;
+    font-weight: 500;
+
+}
+
+.third-btn{
+    background-color: #e1eaec;
+    color: var(--text-color);
+    padding: 10px 20px;
+    size: var(--button-small-size);
+    line-height: var(--button-small-line-height);/* 26px */
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+
+}
+
+.fourth-btn{
+    background-color: var(--color-700);
+    color: white;
+    width: auto;
+    height: auto;
+    padding: 3px 9px;
+    line-height: var(--button-medium-line-height);/* 26px */
+    border-radius: 30px;
+    border: none;
+    font-size: 10x;
+}
+
+
+
+.primary-btn-1{
+
+    background-color: var(--color-700);
+    color: white;
+    padding: 10px 20px;
+    size: var(--button-large-size); /* 20px*/
+    line-height: var(--button-large-line-height);/* 32px */
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+}
+
+.primary-btn-2{
+
+    background-color: white;
+    color: var(--color-700);
+    padding: 10px 20px;
+    size: var(--button-large-size); /* 20px*/
+    line-height: var(--button-large-line-height);/* 32px */
+    border-radius: 30px;
+    border: 2px solid var(--color-700);
+    font-size: 20px;
+}
+
+

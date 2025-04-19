@@ -1,0 +1,110 @@
+h1 {
+    font-size: var(--h1-size);
+    line-height: var(--h2-line-height);
+    font-family: var(--font-chakra);
+    font-weight: var(--font-weight-large);
+    color: var(--color-text);
+
+}
+h2{
+    font-size: var(--h2-size);
+    line-height: var(--h2-line-height);
+    font-family: var(--font-chakra);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text);
+}
+
+h3{
+    font-size: var(--h3-size);
+    line-height: var(--h3-line-height);
+    font-family: var(--font-chakra);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text);
+}
+
+
+
+h5{
+    font-size: var(--h5-size);
+    line-height: var(--h5-line-height);
+    font-family: var(--font-chakra);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-description);
+}
+
+h6{
+    font-size: var(--h6-size);
+    line-height: var(--h6-line-height);
+    font-family: var(--font-chakra);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text);
+}
+
+
+.p-info, .p-call{
+    color: var(--color-description);
+    text-align: left;
+    line-height: var(--subtitle-1-line-height);
+    font-size: var(--subtitle-1-size);
+    font-weight: 200;
+    font-family: var(--font-space) ;
+
+}
+
+
+
+.p-opportunity{
+    color: var(--color-description);
+    text-align: left;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--font-space) ;
+}
+
+
+.alt{
+    color: rgb(23, 114, 135);
+}
+
+.title-opportunity{
+    line-height: 24px;
+    font-size: 14px;
+}
+  
+.p-call{
+    font-weight: 500;
+}
+
+.p-step{
+    color: var(--color-description);
+    text-align: left;
+    line-height: var(--title-2-line-height);
+    font-size: var(--title-2-size);
+    font-weight: 200;
+    font-family: var(--font-space) ;
+}
+
+
+
+
+.p-footer-text{
+    color: var(--color-description);
+    text-align: left;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: var(--font-space) ;
+}
+
+.p-footer-title{
+    font-weight: 700;
+    font-family: var(--font-chakra);
+    font-size: 16px;
+}
+
+.alternate{
+    color: white;
+    text-shadow: 1px 0;
+    
+}
