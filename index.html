@@ -48,7 +48,7 @@
     </p>
     <div class="hero-buttons">
     <button class="primary-btn-1">Empezá a invertir</button>
-    <button class="primary-btn-2">Quiero Saber más</button>
+    <button class="primary-btn-2" onclick="toggleFormModal()">Quiero Saber más</button>
   </div>
   </div>
 
@@ -66,6 +66,52 @@
         <li><a href="#">Sobre nosotros</a></li>
         <li><a href="#">Contacto</a></li>
       </ul>
+    </div>
+  </div>
+
+  <!-- Form Modal -->
+  <div class="form-modal" id="formModal">
+    <div class="form-modal-content">
+      <button class="form-close" onclick="toggleFormModal()">×</button>
+      <h2 class="form-title">Formulario de contacto</h2>
+      <p class="form-description">Dejanos tus datos para que podamos ayudarte en lo que necesites, o contarte más sobre la nueva forma de invertir que tenemos para ofrecerte.</p>
+      
+      <form id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label class="form-label" for="nombre">Nombre</label>
+          <input type="text" id="nombre" class="form-input" required>
+          <span class="error-message">Este campo es obligatorio</span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="apellido">Apellido</label>
+          <input type="text" id="apellido" class="form-input" required>
+          <span class="error-message">Este campo es obligatorio</span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="celular">Celular</label>
+          <input type="tel" id="celular" class="form-input" required>
+          <span class="error-message">Este campo es obligatorio</span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email">Correo electrónico</label>
+          <input type="email" id="email" class="form-input" required>
+          <span class="error-message">Este campo es obligatorio</span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="mensaje">Mensaje</label>
+          <textarea id="mensaje" class="form-textarea" required></textarea>
+          <span class="error-message">Este campo es obligatorio</span>
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit" class="form-submit primary" id="submitButton">Enviar</button>
+          <button type="button" class="form-submit secondary" onclick="toggleFormModal()">Tal vez luego</button>
+        </div>
+      </form>
     </div>
   </div>
 
@@ -185,180 +231,157 @@
 
   <section class="opportunities">
       <div class="opportunities-container">
-    <h2>OPORTUNIDADES UNICAS EN WIDAN</h2>
-    <H5>Las inversiones más elegidas</H5>
-     </div>
+        <h2>OPORTUNIDADES UNICAS EN WIDAN</h2>
+        <H5>Las inversiones más elegidas</H5>
+      </div>
 
-    <div class="carrousel-wrapper">
-
-      <div class="carrousel-track" id="carrouselTrack">
-
-        <div class="carrousel-card">
-          <img class="carrousel-img" src="" alt="foto de activo">
-          <div class="carrousel-text">
-            <div class="carrousel-top">
-              <p class="title-opportunity">Campo Don Pedro</p>
-              <button class="fourth-btn">11,07%</button>
+      <div class="carrousel-wrapper">
+        <div class="carrousel-track">
+          <!-- Original cards -->
+          <div class="carrousel-card">
+            <img class="carrousel-img" src="" alt="foto de activo">
+            <div class="carrousel-text">
+              <div class="carrousel-top">
+                <p class="title-opportunity">Campo Don Pedro</p>
+                <button class="fourth-btn">11,07%</button>
+              </div>
+              <div class="carrousel-bottom">
+                <p class="p-opportunity">Buenos Aires, Argentina</p>
+                <p class="p-opportunity">Est. Anual Return</p>
+              </div>
             </div>
-            <div class="carrousel-bottom">
-              <p class="p-opportunity">Buenos Aires, Argentina</p>
-              <p class="p-opportunity">Est. Anual Return</p>
+          </div>
 
+          <div class="carrousel-card">
+            <img class="carrousel-img" src="" alt="foto de activo">
+            <div class="carrousel-text">
+              <div class="carrousel-top">
+                <p class="title-opportunity">Alexis Mac Allister</p>
+                <button class="fourth-btn">€32M</button>
+              </div>
+              <div class="carrousel-bottom">
+                <p class="p-opportunity">Liverpool, FC</p>
+                <p class="p-opportunity">Desde USD 1</p>
+              </div>
             </div>
+          </div>
 
+          <div class="carrousel-card">
+            <img class="carrousel-img" src="" alt="foto de activo">
+            <div class="carrousel-text">
+              <div class="carrousel-top">
+                <p class="title-opportunity">The Ritz Carlton Residences</p>
+                <button class="fourth-btn">24,3%</button>
+              </div>
+              <div class="carrousel-bottom">
+                <p class="p-opportunity">Miami Beach, Florida</p>
+                <p class="p-opportunity">Est. Anual Return</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carrousel-card">
+            <img class="carrousel-img" src="" alt="foto de activo">
+            <div class="carrousel-text">
+              <div class="carrousel-top">
+                <p class="title-opportunity">Tomás Martín Etcheverry</p>
+                <button class="fourth-btn">USD 400</button>
+              </div>
+              <div class="carrousel-bottom">
+                <p class="p-opportunity">25 | Tenis | Argentina</p>
+                <p class="p-opportunity">Precio Token</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carrousel-card">
+            <img class="carrousel-img" src="" alt="foto de activo">
+            <div class="carrousel-text">
+              <div class="carrousel-top">
+                <p class="title-opportunity">Pool House</p>
+                <button class="fourth-btn">10.1%</button>
+              </div>
+              <div class="carrousel-bottom">
+                <p class="p-opportunity">Miami, Florida</p>
+                <p class="p-opportunity">Est. Anual Return</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Duplicated cards for infinite effect -->
+          <div class="carrousel-card">
+            <img class="carrousel-img" src="" alt="foto de activo">
+            <div class="carrousel-text">
+              <div class="carrousel-top">
+                <p class="title-opportunity">Campo Don Pedro</p>
+                <button class="fourth-btn">11,07%</button>
+              </div>
+              <div class="carrousel-bottom">
+                <p class="p-opportunity">Buenos Aires, Argentina</p>
+                <p class="p-opportunity">Est. Anual Return</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carrousel-card">
+            <img class="carrousel-img" src="" alt="foto de activo">
+            <div class="carrousel-text">
+              <div class="carrousel-top">
+                <p class="title-opportunity">Alexis Mac Allister</p>
+                <button class="fourth-btn">€32M</button>
+              </div>
+              <div class="carrousel-bottom">
+                <p class="p-opportunity">Liverpool, FC</p>
+                <p class="p-opportunity">Desde USD 1</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carrousel-card">
+            <img class="carrousel-img" src="" alt="foto de activo">
+            <div class="carrousel-text">
+              <div class="carrousel-top">
+                <p class="title-opportunity">The Ritz Carlton Residences</p>
+                <button class="fourth-btn">24,3%</button>
+              </div>
+              <div class="carrousel-bottom">
+                <p class="p-opportunity">Miami Beach, Florida</p>
+                <p class="p-opportunity">Est. Anual Return</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carrousel-card">
+            <img class="carrousel-img" src="" alt="foto de activo">
+            <div class="carrousel-text">
+              <div class="carrousel-top">
+                <p class="title-opportunity">Tomás Martín Etcheverry</p>
+                <button class="fourth-btn">USD 400</button>
+              </div>
+              <div class="carrousel-bottom">
+                <p class="p-opportunity">25 | Tenis | Argentina</p>
+                <p class="p-opportunity">Precio Token</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carrousel-card">
+            <img class="carrousel-img" src="" alt="foto de activo">
+            <div class="carrousel-text">
+              <div class="carrousel-top">
+                <p class="title-opportunity">Pool House</p>
+                <button class="fourth-btn">10.1%</button>
+              </div>
+              <div class="carrousel-bottom">
+                <p class="p-opportunity">Miami, Florida</p>
+                <p class="p-opportunity">Est. Anual Return</p>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div class="carrousel-card">
-          <img class="carrousel-img" src="" alt="foto de activo">
-          <div class="carrousel-text">
-            <div class="carrousel-top">
-              <p class="title-opportunity">Alexis Mac Allister</p>
-              <button class="fourth-btn">€32M</button>
-            </div>
-            <div class="carrousel-bottom">
-              <p class="p-opportunity">Liverpool, FC</p>
-              <p class="p-opportunity">Desde USD 1</p>
-
-            </div>
-
-          </div>
-        </div>
-        <div class="carrousel-card">
-          <img class="carrousel-img" src="" alt="foto de activo">
-          <div class="carrousel-text">
-            <div class="carrousel-top">
-              <p class="title-opportunity">The Ritz Carlton Residences</p>
-              <button class="fourth-btn">24,3%</button>
-            </div>
-            <div class="carrousel-bottom">
-              <p class="p-opportunity">Miami Beach, Florida</p>
-              <p class="p-opportunity">Est. Anual Return</p>
-
-            </div>
-
-          </div>
-        </div>
-        <div class="carrousel-card">
-          <img class="carrousel-img" src="" alt="foto de activo">
-          <div class="carrousel-text">
-            <div class="carrousel-top">
-              <p class="title-opportunity">Tomás Martín Etcheverry</p>
-              <button class="fourth-btn">USD 400</button>
-            </div>
-            <div class="carrousel-bottom">
-              <p class="p-opportunity">25 | Tenis | Argentina
-              </p>
-              <p class="p-opportunity">Precio Token</p>
-
-            </div>
-
-          </div>
-        </div>
-        <div class="carrousel-card">
-          <img class="carrousel-img" src="" alt="foto de activo">
-          <div class="carrousel-text">
-            <div class="carrousel-top">
-              <p class="title-opportunity">Pool House</p>
-              <button class="fourth-btn">10.1%</button>
-            </div>
-            <div class="carrousel-bottom">
-              <p class="p-opportunity">Miami, Florida</p>
-              <p class="p-opportunity">Est. Anual Return</p>
-
-            </div>
-
-          </div>
-        </div>
-
-
-        <div class="carrousel-card">
-          <img class="carrousel-img" src="" alt="foto de activo">
-          <div class="carrousel-text">
-            <div class="carrousel-top">
-              <p class="title-opportunity">Campo Don Pedro</p>
-              <button class="fourth-btn">11,07%</button>
-            </div>
-            <div class="carrousel-bottom">
-              <p class="p-opportunity">Buenos Aires, Argentina</p>
-              <p class="p-opportunity">Est. Anual Return</p>
-
-            </div>
-
-          </div>
-        </div>
-
-        <div class="carrousel-card">
-          <img class="carrousel-img" src="" alt="foto de activo">
-          <div class="carrousel-text">
-            <div class="carrousel-top">
-              <p class="title-opportunity">Alexis Mac Allister</p>
-              <button class="fourth-btn">€62M</button>
-            </div>
-            <div class="carrousel-bottom">
-              <p class="p-opportunity">Liverpool, FC</p>
-              <p class="p-opportunity">Desde USD 1</p>
-
-            </div>
-
-          </div>
-        </div>
-        <div class="carrousel-card">
-          <img class="carrousel-img" src="" alt="foto de activo">
-          <div class="carrousel-text">
-            <div class="carrousel-top">
-              <p class="title-opportunity">The Ritz Carlton Residences</p>
-              <button class="fourth-btn">24,3%</button>
-            </div>
-            <div class="carrousel-bottom">
-              <p class="p-opportunity">Miami Beach, Florida</p>
-              <p class="p-opportunity">Est. Anual Return</p>
-
-            </div>
-
-          </div>
-        </div>
-        <div class="carrousel-card">
-          <img class="carrousel-img" src="" alt="foto de activo">
-          <div class="carrousel-text">
-            <div class="carrousel-top">
-              <p class="title-opportunity">Tomás Martín Etcheverry</p>
-              <button class="fourth-btn">USD 400</button>
-            </div>
-            <div class="carrousel-bottom">
-              <p class="p-opportunity">25 | Tenis | Argentina
-              </p>
-              <p class="p-opportunity">Precio Token</p>
-
-            </div>
-
-          </div>
-        </div>
-        <div class="carrousel-card">
-          <img class="carrousel-img" src="" alt="foto de activo">
-          <div class="carrousel-text">
-            <div class="carrousel-top">
-              <p class="title-opportunity">Pool House</p>
-              <button class="fourth-btn">10.1%</button>
-            </div>
-            <div class="carrousel-bottom">
-              <p class="p-opportunity">Miami, Florida</p>
-              <p class="p-opportunity">Est. Anual Return</p>
-
-            </div>
-
-          </div>
-        </div>
-
-    </div>
-
-    </div>
-
-  
-
-    <button class="secondary-btn-2">Explorar oportunidades</button>
-
-
+      <button class="secondary-btn-2">Explorar oportunidades</button>
   </section>
 
 
