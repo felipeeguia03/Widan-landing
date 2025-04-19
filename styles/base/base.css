@@ -1,6 +1,6 @@
-@import url('main.css');
+@import url('/Widan-landing/styles/base/main.css');
 @import url('fonts/tt-firs-neue/TTFirsNeueTrl-Medium.woff2');
 @import url('fonts/tt-firs-neue/TTFirsNeueTrl-Regular.woff2');
-@import url('/styles/components/buttons.css');
-@import url('typography.css');
-@import url('/styles/layout/grid.css');
+@import url('/Widan-landing/styles/components/buttons.css');
+@import url('/Widan-landing/styles/base/typography.css');
+@import url('/Widan-landing/styles/layout/grid.css');
