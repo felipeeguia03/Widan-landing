@@ -159,15 +159,18 @@ section {
 
   .hero-buttons {
     width: 100%;
-    gap: 30px;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 
   .primary-btn-1,
   .primary-btn-2 {
-    width: 100%;
-    max-width: none;
-    padding: 16px 32px;
-    font-size: 18px;
+    width: auto;
+    min-width: 200px;
+    padding: 14px 24px;
+    font-size: 16px;
   }
 }
 
@@ -368,6 +371,7 @@ section {
   .hero-buttons {
     width: 100%;
     gap: 25px;
+    flex-direction: column;
   }
 
   .primary-btn-1,
