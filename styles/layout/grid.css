@@ -156,6 +156,19 @@ section {
     font-size: 14px;
     line-height: 1.4;
   }
+
+  .hero-buttons {
+    width: 100%;
+    gap: 30px;
+  }
+
+  .primary-btn-1,
+  .primary-btn-2 {
+    width: 100%;
+    max-width: none;
+    padding: 16px 32px;
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -188,6 +201,10 @@ section {
   background-color: rgb(0, 0, 0);
   border-radius: 20px;
   margin-bottom: 20px;
+}
+
+.video-grapper h2 {
+  font-weight: 600;
 }
 
 /* OPPORTUNITY */
@@ -349,19 +366,23 @@ section {
   }
 
   .hero-buttons {
-    flex-direction: column;
-    gap: 15px;
+    width: 100%;
+    gap: 25px;
   }
 
   .primary-btn-1,
   .primary-btn-2 {
     width: 100%;
+    max-width: none;
+    padding: 14px 28px;
+    font-size: 16px;
   }
 
   .reason-card-wrapper-1,
   .reason-card-wrapper-2 {
     flex-direction: column;
     margin: 20px;
+    gap: 20px;
   }
 
   .card {
@@ -372,7 +393,6 @@ section {
   .p-reason {
     font-size: 16px;
     line-height: 1.5;
-    margin-bottom: 16px;
   }
 
   .footer-bottom-wrapper {
@@ -543,6 +563,7 @@ section {
   position: relative;
   overflow: hidden;
   margin-top: 60px;
+  width: 100%;
 }
 
 .carrousel-track {
@@ -550,6 +571,7 @@ section {
   gap: 16px;
   width: fit-content;
   animation: scroll 15s linear infinite;
+  padding-left: 0;
 }
 
 @keyframes scroll {
@@ -607,12 +629,12 @@ section {
 
 .fade-left {
   left: 0;
-  background: linear-gradient(to right, white 0%, transparent 100%);
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .fade-right {
   right: 0;
-  background: linear-gradient(to left, white 0%, transparent 100%);
+  background: linear-gradient(to left, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .carrousel-bottom {
@@ -720,6 +742,10 @@ section {
   align-items: flex-start;
 }
 
+.p-footer-title {
+  font-weight: 700;
+}
+
 .social-media-logos,
 .channels-logos {
   display: flex;
@@ -741,31 +767,53 @@ section {
   align-items: center;
 }
 
+@media (max-width: 1200px) {
+  .footer-bottom-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footer-contact-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    gap: 80px;
+  }
+
+  .footer-references,
+  .footer-contact,
+  .footer-social-media,
+  .footer-channels {
+    min-width: 200px;
+  }
+}
+
 @media (max-width: 768px) {
   .footer-container {
     padding: 32px 24px;
   }
 
-  .footer-bottom-wrapper {
+  .footer-contact-wrapper {
     flex-direction: column;
     gap: 40px;
-    padding: 32px 0;
+  }
+
+  .footer-references,
+  .footer-contact,
+  .footer-social-media,
+  .footer-channels {
+    width: 100%;
   }
 
   .footer-rights {
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     padding: 20px 0;
   }
 
   .footer-rights-wrapper {
     flex-direction: row;
     gap: 20px;
-  }
-
-  .social-media-logos,
-  .channels-logos {
-    flex-direction: row;
   }
 }
 
@@ -1023,5 +1071,10 @@ section {
 .secondary-btn-1.inicio:hover {
   background-color: var(--color-800);
   transform: translateY(-1px);
+}
+
+.p-reason {
+  font-size: 16px;
+  line-height: 1.5;
 }
 
