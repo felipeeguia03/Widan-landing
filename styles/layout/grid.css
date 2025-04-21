@@ -93,7 +93,7 @@ section {
   justify-content: flex-start;
 }
 
-.hamburger-btn{
+.hamburger-btn {
   display: none;
 }
 
@@ -110,7 +110,7 @@ section {
   }
 
   .btn-wrapper {
-    display: none; /* Oculta los botones normales */
+    display: none;
   }
 
   .hamburger-btn {
@@ -118,7 +118,7 @@ section {
     align-items: center;
     justify-content: center;
     color: rgb(23, 114, 135);
-    font-size: 32px; /* Más grande el icono */
+    font-size: 32px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -130,17 +130,31 @@ section {
   }
   
   .hamburger-btn:hover {
-    background-color: #e1eaec; /* O lo que uses como hover */
+    background-color: #e1eaec;
     transform: scale(1.05);
   }
 
-  .navbar {
-    justify-content: space-between; /* Espacia logo, login y hamburguesa */
-    gap: 16px;
+  .inicio {
+    margin-left: auto;
   }
 
-  .inicio{
-    margin-left: auto;
+  .reason-card-wrapper-1,
+  .reason-card-wrapper-2 {
+    margin: 20px;
+    gap: 20px;
+  }
+
+  .card {
+    min-height: 300px;
+  }
+
+  .card-layout {
+    height: 100%;
+  }
+
+  .p-reason {
+    font-size: 14px;
+    line-height: 1.4;
   }
 }
 
@@ -308,20 +322,20 @@ section {
 
 @media (max-width: 768px) {
   .navbar-wrapper {
-    padding: 0 20px;
+    padding: 0 24px;
   }
 
   .navbar {
-    padding: 12px;
-    gap: 15px;
+    padding: 10px;
+    gap: 16px;
   }
 
-  .btn-wrapper {
+  .inicio {
     display: none;
   }
 
   .hamburger-btn {
-    display: block;
+    margin-left: auto;
   }
 
   .hero-wrapper {
@@ -347,10 +361,18 @@ section {
   .reason-card-wrapper-1,
   .reason-card-wrapper-2 {
     flex-direction: column;
+    margin: 20px;
   }
 
-  .c1, .c2, .c3, .c4 {
+  .card {
     width: 100%;
+    min-height: auto;
+  }
+
+  .p-reason {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 16px;
   }
 
   .footer-bottom-wrapper {
@@ -369,16 +391,14 @@ section {
   }
 
   .footer-rights {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    text-align: center;
-    padding: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 0;
   }
 
   .footer-rights-wrapper {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    gap: 20px;
   }
 }
 
@@ -520,9 +540,8 @@ section {
 }
 
 .carrousel-wrapper {
-  width: 100%;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   margin-top: 60px;
 }
 
@@ -574,6 +593,26 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.fade-left,
+.fade-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.fade-left {
+  left: 0;
+  background: linear-gradient(to right, white 0%, transparent 100%);
+}
+
+.fade-right {
+  right: 0;
+  background: linear-gradient(to left, white 0%, transparent 100%);
 }
 
 .carrousel-bottom {
@@ -665,52 +704,27 @@ section {
 
 .footer-bottom-wrapper {
   width: 100%;
-  height: auto;
   padding: 48px 0;
   display: flex;
   justify-content: flex-start;
-  align-items: start;
-  align-content: start;
   gap: 80px;
 }
 
-.footer-references {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.footer-contact {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.footer-social-media {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
+.footer-references,
+.footer-contact,
+.footer-social-media,
 .footer-channels {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
+  align-items: flex-start;
 }
 
-.social-media-logos {
-  display: flex;
-  gap: 20px;
-}
-
+.social-media-logos,
 .channels-logos {
   display: flex;
   gap: 20px;
-}
-
-.footer-social-logo {
-  border-radius: 500px;
-  border: 2px solid black;
+  flex-direction: row;
 }
 
 .footer-rights {
@@ -718,27 +732,40 @@ section {
   padding: 30px 60px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .footer-rights-wrapper {
   display: flex;
-  flex-direction: row;
   gap: 20px;
-  justify-content: space-around;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
-  .footer-rights {
+  .footer-container {
+    padding: 32px 24px;
+  }
+
+  .footer-bottom-wrapper {
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    text-align: center;
-    padding: 20px;
+    gap: 40px;
+    padding: 32px 0;
+  }
+
+  .footer-rights {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 0;
   }
 
   .footer-rights-wrapper {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .social-media-logos,
+  .channels-logos {
+    flex-direction: row;
   }
 }
 
